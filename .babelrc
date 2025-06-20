@@ -1,0 +1,6 @@
+{
+  "presets": [
+    "@babel/preset-env",       // 用于ESM和现代JS语法转换
+    "@babel/preset-typescript" // 用于TypeScript语法转换
+  ]
+}
