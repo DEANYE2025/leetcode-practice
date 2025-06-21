@@ -50,5 +50,4 @@ describe('longestConsecutive', () => {
         const nums = [1, 100, 2, 200, 3, 300, 4, 400];
         expect(longestConsecutive(nums)).toBe(4); // Sequence [1,2,3,4]
     });
-
 });

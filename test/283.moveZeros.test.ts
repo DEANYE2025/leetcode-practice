@@ -63,5 +63,4 @@ describe('moveZeroes', () => {
         moveZeroes(nums);
         expect(nums).toEqual(expected);
     });
-
 });
