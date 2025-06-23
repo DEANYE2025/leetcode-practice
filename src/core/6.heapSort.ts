@@ -65,5 +65,7 @@ export default heapSort;
 * Best, Worst, Average Case: O(N log N)
 * Space Complexity: O(1) (in-place sort)
 * Stability: Unstable
-* Use Cases: When O(N log N) time complexity with O(1) space complexity is required. Commonly used to implement priority queues and solve Top K problems (finding the K largest/smallest elements).
+* Use Cases: When O(N log N) time complexity with O(1) space complexity is required.
+*            Commonly used to implement priority queues and solve Top K problems
+*            (finding the K largest/smallest elements).
 */

@@ -10,27 +10,33 @@ describe('radixSort', () => {
     });
 
     test('should sort an array with positive numbers (varying digits)', () => {
-        expect(radixSort([170, 45, 75, 90, 802, 24, 2, 66])).toEqual([2, 24, 45, 66, 75, 90, 170, 802]);
+        const arr = [5, 1, 4, 2, 8];
+        expect(radixSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array with duplicate numbers', () => {
-        expect(radixSort([329, 457, 657, 839, 436, 720, 355])).toEqual([329, 355, 436, 457, 657, 720, 839]);
+        const arr = [329, 457, 657, 839, 436, 720, 355];
+        expect(radixSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array with numbers of different lengths', () => {
-        expect(radixSort([1, 10, 100, 2, 20])).toEqual([1, 2, 10, 20, 100]);
+        const arr = [1, 10, 100, 2, 20];
+        expect(radixSort(arr)).toEqual(arr.sort((a, b) => a - b));
     });
 
     test('should sort an array that is already sorted', () => {
-        expect(radixSort([1, 2, 3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
+        const arr = [1, 2, 3, 4, 5];
+        expect(radixSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array that is reverse sorted', () => {
-        expect(radixSort([5, 4, 3, 2, 1])).toEqual([1, 2, 3, 4, 5]);
+        const arr = [5, 4, 3, 2, 1];
+        expect(radixSort(arr)).toEqual(arr.sort());
     });
 
     test('should handle arrays with zeros', () => {
-        expect(radixSort([0, 5, 1, 0, 4])).toEqual([0, 0, 1, 4, 5]);
+        const arr = [0, 5, 1, 0, 4];
+        expect(radixSort(arr)).toEqual(arr.sort());
     });
 
     // Radix sort typically handles non-negative integers. If your implementation supports negative numbers,

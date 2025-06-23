@@ -38,5 +38,6 @@ export default bubbleSort;
 * Average Case: O(N^2)
 * Space Complexity: O(1) (in-place sort)
 * Stability: Stable (maintains the relative order of equal elements)
-* Use Cases: Very small datasets, or for educational purposes. Rarely used in production due to inefficiency.
+* Use Cases: Very small datasets, or for educational purposes. Rarely used in production
+*            due to inefficiency.
 */

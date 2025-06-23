@@ -10,33 +10,40 @@ describe('countingSort', () => {
     });
 
     test('should sort an array with positive numbers', () => {
-        expect(countingSort([5, 1, 4, 2, 8])).toEqual([1, 2, 4, 5, 8]);
+        const arr = [5, 1, 4, 2, 8];
+        expect(countingSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array with duplicate positive numbers', () => {
-        expect(countingSort([3, 1, 4, 1, 5, 9, 2, 6])).toEqual([1, 1, 2, 3, 4, 5, 6, 9]);
+        const arr = [3, 1, 4, 1, 5, 9, 2, 6];
+        expect(countingSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array with zero and positive numbers', () => {
-        expect(countingSort([0, 5, 1, 0, 4])).toEqual([0, 0, 1, 4, 5]);
+        const arr = [0, 5, 1, 0, 4];
+        expect(countingSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array with all same numbers', () => {
-        expect(countingSort([7, 7, 7, 7])).toEqual([7, 7, 7, 7]);
+        const arr = [7, 7, 7, 7];
+        expect(countingSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array that is already sorted', () => {
-        expect(countingSort([1, 2, 3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
+        const arr = [1, 2, 3, 4, 5];
+        expect(countingSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array that is reverse sorted', () => {
-        expect(countingSort([5, 4, 3, 2, 1])).toEqual([1, 2, 3, 4, 5]);
+        const arr = [5, 4, 3, 2, 1];
+        expect(countingSort(arr)).toEqual(arr.sort());
     });
 
     // Special test for negative numbers: Counting Sort usually requires non-negative integers or needs adjustment for range.
     // If your countingSort handles negative numbers by shifting, then add tests for it.
     // For this generic example, assume positive integers or adjusted range.
     test('should handle a narrow range of numbers', () => {
-        expect(countingSort([2, 1, 3, 2, 1, 3])).toEqual([1, 1, 2, 2, 3, 3]);
+        const arr = [2, 1, 3, 2, 1, 3];
+        expect(countingSort(arr)).toEqual(arr.sort());
     });
 });

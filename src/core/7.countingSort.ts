@@ -5,34 +5,33 @@
  */
 function countingSort(arr: number[]) {
     if (arr.length === 0) return [];
-    let maxVal = arr[0];
-    let minVal = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > maxVal) maxVal = arr[i];
-        if (arr[i] < minVal) minVal = arr[i];
-    }
-    console.log(`Counting Sort: minVal=${minVal}, maxVal=${maxVal}`);
+    console.log(`Initial array: ${arr}`);
+    let maxVal = Math.max(...arr);
+    let minVal = Math.min(...arr);
+    console.log(`Counting Sort: minVal = ${minVal}, maxVal = ${maxVal}`);
     const range = maxVal - minVal + 1;
     const count = new Array(range).fill(0);
     const output = new Array(arr.length);
-
     // Store count of each element
     for (let num of arr) {
         count[num - minVal]++;
     }
-
+    console.log(`Counting Sort: count array = ${count}`);
     // Modify count array to store actual position of elements in output array
     for (let i = 1; i < range; i++) {
         count[i] += count[i - 1];
     }
-
+    console.log(`Counting Sort: modified count array = ${count}`);
     // Build the output array (iterate backwards to ensure stability)
     for (let i = arr.length - 1; i >= 0; i--) {
         const num = arr[i];
+        console.log(`Counting Sort: placing ${num} at position ${count[num - minVal] - 1}`);
         output[count[num - minVal] - 1] = num;
+        console.log(`Counting Sort: output array = ${output}`);
         count[num - minVal]--;
+        console.log(`Counting Sort: updated count array = ${count}`);
     }
-
+    console.log(`Sorted array: ${output}`);
     return output;
 }
 

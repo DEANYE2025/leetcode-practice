@@ -50,5 +50,7 @@ export default quickSort;
 * Average Case: O(N log N)
 * Space Complexity: O(log N) (for recursive stack, best/average case) to O(N) (worst case)
 * Stability: Unstable
-* Use Cases: High time efficiency requirements, especially for large datasets. Often faster than Merge Sort due to smaller constant factors. Base for many built-in sorting functions.
+* Use Cases: High time efficiency requirements, especially for large datasets. Often faster
+*            than Merge Sort due to smaller constant factors. Base for many built-in sorting
+*            functions.
 */

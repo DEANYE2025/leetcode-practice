@@ -50,5 +50,6 @@ export default mergeSort;
 * Best, Worst, Average Case: O(N log N)
 * Space Complexity: O(N) (requires additional space for merging sub-arrays)
 * Stability: Stable
-* Use Cases: Situations where stability is required. Large datasets (e.g., external sorting). Efficient for linked lists.
+* Use Cases: Situations where stability is required. Large datasets (e.g., external sorting).
+*            Efficient for linked lists.
 */

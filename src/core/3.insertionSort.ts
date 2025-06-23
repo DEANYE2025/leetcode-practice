@@ -38,5 +38,6 @@ export default insertionSort;
 * Average Case: O(N^2)
 * Space Complexity: O(1) (in-place sort)
 * Stability: Stable
-* Use Cases: Small datasets, or datasets that are mostly sorted. Efficient for online sorting (inserting new elements into an already sorted list).
+* Use Cases: Small datasets, or datasets that are mostly sorted. Efficient for
+*            online sorting (inserting new elements into an already sorted list).
 */
