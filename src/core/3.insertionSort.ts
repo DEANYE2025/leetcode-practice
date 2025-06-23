@@ -9,12 +9,11 @@ function insertionSort(arr: number[]) {
     for (let i = 1; i < n; i++) {
         let current = arr[i]; // Element to be inserted
         console.log(`Inserting element at index ${i} with value ${current}`);
-        let j = i - 1;       // Index of the last element in the sorted portion
-
-        // Move elements of arr[0..i-1], that are greater than current,
+        let j = i - 1; // Index of the last element in the sorted portion
+        // Move elements arr[0..i-1] greater than current,
         // to one position ahead of their current position
         while (j >= 0 && arr[j] > current) {
-            arr[j + 1] = arr[j];
+            arr[j + 1] = arr[j]; // Shift element to the right
             console.log(`Moved element at index ${j} to index ${j + 1}: ${arr}`);
             j--;
         }
@@ -26,9 +25,8 @@ function insertionSort(arr: number[]) {
     return arr;
 }
 
-// Idea: Builds the final sorted array (or list) one item at a time.
-// It iterates through the input elements and inserts each element into
-// its correct position in the already sorted part of the array.
+// Idea: Insert the unsorted elements one by one into the correct positions of
+// the sorted parts, just like dealing cards in playing poker.
 
 export default insertionSort;
 

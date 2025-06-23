@@ -8,7 +8,7 @@ function quickSort(arr: number[], left = 0, right = arr.length - 1) {
         console.log(`Initial array: ${arr}`);
         let pivotIndex = partition(arr, left, right);
         quickSort(arr, left, pivotIndex); // For Hoare's partition, pivotIndex is returned.
-        quickSort(arr, pivotIndex + 1, right);
+        quickSort(arr, pivotIndex + 1, right); // For Lomuto's partition, pivotIndex + 1 is used.
         console.log(`Sorted array: ${arr}`);
     }
     return arr;
@@ -19,28 +19,26 @@ function partition(arr: number[], left: number, right: number) {
     let i = left - 1;
     let j = right + 1;
     console.log(`Partitioning with pivot ${pivot} from index ${left} to ${right}`);
-
     while (true) {
         do {
             i++;
-        } while (arr[i] < pivot);
+        } while (arr[i] < pivot); // Increment i until finding an element >= pivot
         do {
             j--;
-        } while (arr[j] > pivot);
+        } while (arr[j] > pivot); // Decrement j until finding an element <= pivot
         console.log(`i: ${i}, j: ${j}`);
-        if (i >= j) {
+        if (i >= j) { // If indices cross, partitioning is done
             return j; // Return partition point
         }
         console.log(`arr[${i}]: ${arr[i]}, arr[${j}]: ${arr[j]}`);
-        // Swap arr[i] and arr[j]
-        [arr[i], arr[j]] = [arr[j], arr[i]];
+        [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap arr[i] and arr[j]
         console.log(`Swapped arr[${i}] and arr[${j}]: ${arr}`);
     }
 }
 
-// Idea (Divide and Conquer): Picks an element as a pivot and
-//               partitions the array around the picked pivot.
-// Recursively sorts the sub-arrays created.
+// Idea (Divide and Conquer): Select a pivot element, divide the array into two parts:
+// place the parts < the pivot on [one side] and the parts > the pivot on [the other side],
+// and then sort these two parts recursively.
 
 export default quickSort;
 

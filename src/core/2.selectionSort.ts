@@ -8,8 +8,10 @@ function selectionSort(arr: number[]) {
     let n = arr.length;
     for (let i = 0; i < n - 1; i++) {
         let minIndex = i;
+        // Assume the first element of the unsorted portion is the minimum
         for (let j = i + 1; j < n; j++) {
             if (arr[j] < arr[minIndex]) {
+                // Find the index of the minimum element in the unsorted portion
                 minIndex = j;
                 console.log(`New minimum found at index ${minIndex} with value ${arr[minIndex]}`);
             }
@@ -24,9 +26,8 @@ function selectionSort(arr: number[]) {
     return arr;
 }
 
-// Idea: Finds the minimum (or maximum) element in the unsorted portion
-//       and puts it at the end of the sorted portion.
-// Repeats until all elements are sorted.
+// Idea: Each time, select the smallest (or largest) element from the data elements
+// to be sorted and store it at the beginning until all the elements are sorted out.
 
 export default selectionSort;
 

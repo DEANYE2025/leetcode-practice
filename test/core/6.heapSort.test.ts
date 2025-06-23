@@ -9,27 +9,33 @@ describe('heapSort', () => {
         expect(heapSort([5])).toEqual([5]);
     });
 
-    test('should sort an array with even number of elements', () => {
-        expect(heapSort([5, 1, 4, 2, 8])).toEqual([1, 2, 4, 5, 8]);
+    test('should sort an array with odd number of elements', () => {
+        const arr = [5, 1, 4, 2, 8];
+        expect(heapSort(arr)).toEqual(arr.sort());
     });
 
-    test('should sort an array with odd number of elements', () => {
-        expect(heapSort([3, 1, 4, 1, 5, 9, 2, 6])).toEqual([1, 1, 2, 3, 4, 5, 6, 9]);
+    test('should sort an array with even number of elements', () => {
+        const arr = [3, 1, 4, 1, 5, 9, 2, 6];
+        expect(heapSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array with negative numbers', () => {
-        expect(heapSort([-5, -1, -4, -2, -8])).toEqual([-8, -5, -4, -2, -1]);
+        const arr = [-5, -1, -4, -2, -8];
+        expect(heapSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array with duplicate numbers', () => {
-        expect(heapSort([5, 1, 4, 2, 8, 1, 5])).toEqual([1, 1, 2, 4, 5, 5, 8]);
+        const arr = [5, 1, 4, 2, 8, 1, 5];
+        expect(heapSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array that is already sorted', () => {
-        expect(heapSort([1, 2, 3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
+        const arr = [1, 2, 3, 4, 5];
+        expect(heapSort(arr)).toEqual(arr.sort());
     });
 
     test('should sort an array that is reverse sorted', () => {
-        expect(heapSort([5, 4, 3, 2, 1])).toEqual([1, 2, 3, 4, 5]);
+        const arr = [5, 4, 3, 2, 1];
+        expect(heapSort(arr)).toEqual(arr.sort());
     });
 });

@@ -5,14 +5,13 @@
  */
 function countingSort(arr: number[]) {
     if (arr.length === 0) return [];
-
     let maxVal = arr[0];
     let minVal = arr[0];
     for (let i = 1; i < arr.length; i++) {
         if (arr[i] > maxVal) maxVal = arr[i];
         if (arr[i] < minVal) minVal = arr[i];
     }
-
+    console.log(`Counting Sort: minVal=${minVal}, maxVal=${maxVal}`);
     const range = maxVal - minVal + 1;
     const count = new Array(range).fill(0);
     const output = new Array(arr.length);
