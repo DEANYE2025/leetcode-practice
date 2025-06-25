@@ -1,4 +1,4 @@
-import radixSort from '../../src/core/8.radixSort';
+import radixSort from '../../src/sort/8.radixSort';
 
 describe('radixSort', () => {
     test('should sort an empty array', () => {

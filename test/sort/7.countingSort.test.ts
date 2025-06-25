@@ -1,4 +1,4 @@
-import countingSort from '../../src/core/7.countingSort';
+import countingSort from '../../src/sort/7.countingSort';
 
 describe('countingSort', () => {
     test('should sort an empty array', () => {
